@@ -55,6 +55,13 @@ dependencies {
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:$nav_version"
 
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+
+    def gson_converter_version = "2.3.0"
+    implementation "com.squareup.retrofit2:converter-gson:$gson_converter_version"
+
+
 
 
 }
