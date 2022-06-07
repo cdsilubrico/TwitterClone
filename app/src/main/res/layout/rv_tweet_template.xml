@@ -6,7 +6,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,14 +18,13 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:padding="4dp"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/spacing_from_profile_pic"
                 app:layout_constraintTop_toBottomOf="@id/tv_account_name"
                 app:layout_constraintEnd_toEndOf="@id/margin_end_vertical_guideline"
                 app:layout_constraintBottom_toTopOf="@id/bottom_horizontal_guideline"
-                android:text="This is a tweet"
-                />
+                android:text="The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. which translates to “Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain.”"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/bottom_horizontal_guideline"
@@ -38,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent=".97"
+                app:layout_constraintGuide_percent=".98"
                 android:id="@+id/margin_end_vertical_guideline"
                 />
 
@@ -47,14 +46,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent=".17" />
+                app:layout_constraintGuide_percent=".12" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/profile_pic_end_vertical_guideline"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent=".15" />
+                app:layout_constraintGuide_percent=".115" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/profile_pic_top_horizontal_guideline"
@@ -68,14 +67,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.24" />
+                app:layout_constraintGuide_percent="0.4" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/margin_start_vertical_guideline"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent=".03" />
+                app:layout_constraintGuide_percent=".02" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_account_image"
@@ -102,7 +101,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Clowasdfafdsafas"
+                android:text="Seeeeeeeeaaaaa"
                 android:textColor="@color/twitter"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/spacing_from_profile_pic"
