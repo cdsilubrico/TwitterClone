@@ -38,7 +38,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/username"
+            android:hint="@string/label_username"
             android:padding="10dp"
             android:textSize="18sp" />
 
@@ -58,7 +58,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password_label"
+            android:hint="@string/label_password"
             android:padding="10dp"
             android:textSize="18sp"
             />
@@ -79,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/twitter"
-            android:text="@string/login_label"
+            android:text="@string/label_login"
             android:textSize="14sp"
             android:textColor="@color/white"
             />
