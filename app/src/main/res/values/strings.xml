@@ -4,4 +4,10 @@
     <string name="label_username">Username</string>
     <string name="label_login">Login</string>
     <string name="label_password">Password</string>
+
+    <string name="placeholder_search">Search Placeholder</string>
+    <string name="placeholder_notifications">Notifications Placeholder</string>
+    <string name="placeholder_messages">Messages Placeholder</string>
+    <string name="placeholder_space">Space Placeholder</string>
+
 </resources>
