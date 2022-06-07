@@ -6,7 +6,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -47,14 +47,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent=".24" />
+                app:layout_constraintGuide_percent=".17" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/profile_pic_end_vertical_guideline"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent=".22" />
+                app:layout_constraintGuide_percent=".15" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/profile_pic_top_horizontal_guideline"
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.5" />
+                app:layout_constraintGuide_percent="0.3" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/margin_start_vertical_guideline"
@@ -81,17 +81,20 @@
                 android:id="@+id/cv_account_image"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:cardCornerRadius="50dp"
+                app:cardCornerRadius="30dp"
                 app:layout_constraintBottom_toTopOf="@id/profile_pic_bottom_horizontal_guideline"
                 app:layout_constraintEnd_toStartOf="@id/profile_pic_end_vertical_guideline"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
                 app:layout_constraintTop_toBottomOf="@id/profile_pic_top_horizontal_guideline"
                 >
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_account_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/twitter_logo_vector_png_clipart_1" />
 
             </androidx.cardview.widget.CardView>
 
@@ -102,7 +105,7 @@
                 android:padding="4dp"
                 android:text="Clowasdfafdsafas"
                 android:textColor="@color/twitter"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/spacing_from_profile_pic"
                 app:layout_constraintTop_toBottomOf="@id/profile_pic_top_horizontal_guideline"
                 />
@@ -113,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:padding="4dp"
                 android:text="ATClowHandle"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/tv_account_name"
                 app:layout_constraintTop_toTopOf="@+id/profile_pic_top_horizontal_guideline" />
@@ -124,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:padding="4dp"
                 android:text="6h"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/tv_account_handle"
                 app:layout_constraintTop_toBottomOf="@id/profile_pic_top_horizontal_guideline" />
 
