@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent=".98"
+                app:layout_constraintGuide_percent=".97"
                 android:id="@+id/margin_end_vertical_guideline"
                 />
 
@@ -61,21 +61,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent=".09" />
+                app:layout_constraintGuide_percent=".04" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/profile_pic_bottom_horizontal_guideline"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.3" />
+                app:layout_constraintGuide_percent="0.24" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/margin_start_vertical_guideline"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent=".02" />
+                app:layout_constraintGuide_percent=".03" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_account_image"
@@ -84,7 +84,6 @@
                 app:cardCornerRadius="30dp"
                 app:layout_constraintBottom_toTopOf="@id/profile_pic_bottom_horizontal_guideline"
                 app:layout_constraintEnd_toStartOf="@id/profile_pic_end_vertical_guideline"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
                 app:layout_constraintTop_toBottomOf="@id/profile_pic_top_horizontal_guideline"
                 >
