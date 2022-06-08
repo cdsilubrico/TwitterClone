@@ -60,7 +60,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
 
     //Gson
-    def gson_converter_version = "2.3.0"
+    def gson_converter_version = "2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:$gson_converter_version"
 
 
