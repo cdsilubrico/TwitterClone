@@ -1,4 +1,4 @@
-package com.example.twitterclone
+package com.example.twitterClone
 
 import org.junit.Test
 

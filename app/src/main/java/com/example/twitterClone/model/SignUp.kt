@@ -1,4 +1,4 @@
-package com.example.twitterclone.model
+package com.example.twitterClone.model
 
 data class SignUp(
     val email: String,
