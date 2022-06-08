@@ -1,4 +1,4 @@
-package com.example.twitterclone.network
+package com.example.twitterClone.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

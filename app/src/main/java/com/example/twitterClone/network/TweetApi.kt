@@ -1,10 +1,9 @@
-package com.example.twitterclone.network
+package com.example.twitterClone.network
 
-import com.example.twitterclone.model.Login
-import com.example.twitterclone.model.SignUp
-import com.example.twitterclone.model.Tweet
+import com.example.twitterClone.model.Login
+import com.example.twitterClone.model.SignUp
+import com.example.twitterClone.model.Tweet
 import retrofit2.Call
-import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface TweetApi {
