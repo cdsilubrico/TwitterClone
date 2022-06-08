@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.twitterClone.ui.fragment.TwitterFeed"
+        android:label="fragment_tweeter_feed"
+        tools:layout="@layout/fragment_twitter_feed" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.twitterClone.ui.fragment.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/space"
+        android:name="com.example.twitterClone.ui.fragment.Space"
+        android:label="fragment_space"
+        tools:layout="@layout/fragment_space" />
+    <fragment
+        android:id="@+id/notifications"
+        android:name="com.example.twitterClone.ui.fragment.Notification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/messages"
+        android:name="com.example.twitterClone.ui.fragment.Messages"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.twitterClone.ui.fragment.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+
+</navigation>
