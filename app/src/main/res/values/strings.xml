@@ -9,5 +9,11 @@
     <string name="placeholder_notifications">Notifications Placeholder</string>
     <string name="placeholder_messages">Messages Placeholder</string>
     <string name="placeholder_space">Space Placeholder</string>
+    <string name="label_home">Home</string>
+    <string name="labe_search">Search</string>
+    <string name="label_search">Search</string>
+    <string name="label_space">Space</string>
+    <string name="label_notifications">Notifications</string>
+    <string name="label_messages">Messages</string>
 
 </resources>
