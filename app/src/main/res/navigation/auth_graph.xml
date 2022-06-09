@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_graph"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.twitterClone.ui.fragment.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.twitterClone.ui.fragment.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+    </fragment>
+
+</navigation>

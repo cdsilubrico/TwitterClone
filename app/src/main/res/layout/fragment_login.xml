@@ -6,83 +6,117 @@
     android:layout_height="match_parent"
     tools:context="com.example.twitterClone.ui.fragment.Login">
 
-
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@drawable/twitter_logo_vector_png_clipart_1"
-        app:layout_constraintBottom_toTopOf="@id/center_lower_horizontal_guideline"
-        app:layout_constraintEnd_toStartOf="@id/center_right_vertical_guideline"
-        app:layout_constraintStart_toEndOf="@id/center_left_vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@id/center_upper_horizontal_guideline" />
+        app:layout_constraintBottom_toTopOf="@id/ten_percent_horizontal_guideline"
+        app:layout_constraintEnd_toStartOf="@id/fifty_five_vertical_guideline"
+        app:layout_constraintStart_toEndOf="@id/forty_five_percent_vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/five_percent_horizontal_guideline" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_username"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"
-        app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"
-        app:layout_constraintStart_toStartOf="@id/margin_start_vertical_guideline">
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/label_home_title"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/margin_end_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/margin_start_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/margin_top_horizontal_guideline" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/label_username"
-            android:padding="10dp"
-            android:textSize="18sp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_password"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        app:cardUseCompatPadding="true"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/label_email"
+        android:paddingBottom="12dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintEnd_toStartOf="@+id/margin_end_vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/margin_start_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/thirty_five_horizontal_guideline" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/label_password"
+        android:paddingBottom="12dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/margin_start_vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@id/horizontal_guideline">
+        app:layout_constraintTop_toTopOf="@+id/fifty_six_horizontal_guideline" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/label_password"
-            android:padding="10dp"
-            android:textSize="18sp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_last_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"
-        app:layout_constraintStart_toStartOf="@id/margin_start_vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@id/cv_password">
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/label_last_name"
+        android:paddingBottom="12dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/margin_end_vertical_guideline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/margin_start_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/forty_nine_horizontal_guideline" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/twitter"
-            android:text="@string/label_login"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_first_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/label_first_name"
+        android:paddingBottom="12dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/margin_end_vertical_guideline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/margin_start_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/forty_two_horizontal_guideline" />
 
-    </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/label_create"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/margin_bottom_horizontal_guideline"
+        app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline" />
 
 
+    <!-- 5% Horizontal-->
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horizontal_guideline"
+        android:id="@+id/five_percent_horizontal_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.01" />
 
+    <!-- 10% Horizontal -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ten_percent_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- 50% Vertical-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/center_vertical_guideline"
         android:layout_width="wrap_content"
@@ -90,47 +124,84 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
+    <!-- 45% Vertical-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/forty_five_percent_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <!-- 55% Vertical-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifty_five_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <!-- 35% Horizontal -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/thirty_five_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <!-- 42% Horizontal -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/forty_two_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <!-- 49% Horizontal -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/forty_nine_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <!-- 56% Horizontal -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifty_six_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.56" />
+
+    <!--Margin Start-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/margin_start_vertical_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.03" />
+        app:layout_constraintGuide_percent="0.1" />
 
+    <!--Margin End-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/margin_end_vertical_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.97" />
+        app:layout_constraintGuide_percent="0.9" />
 
+    <!--Margin Top-->
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/center_left_vertical_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/center_right_vertical_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.60" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/center_upper_horizontal_guideline"
+        android:id="@+id/margin_top_horizontal_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.13" />
+        app:layout_constraintGuide_percent="0.1" />
 
+    <!--Margin Bottom-->
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/center_lower_horizontal_guideline"
+        android:id="@+id/margin_bottom_horizontal_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
-
+        app:layout_constraintGuide_percent="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
