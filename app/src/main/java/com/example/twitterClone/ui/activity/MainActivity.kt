@@ -1,5 +1,6 @@
-package com.example.twitterClone.ui
+package com.example.twitterClone.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
@@ -12,10 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bvv_btm_nav)
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+        finish()
+        startActivity(Intent(this,Auth::class.java))
 
-        bottomNavigation.setupWithNavController(navHostFragment.navController)
+//        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bvv_btm_nav)
+//        val navHostFragment =
+//            supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+//
+//        bottomNavigation.setupWithNavController(navHostFragment.navController)
     }
 }
