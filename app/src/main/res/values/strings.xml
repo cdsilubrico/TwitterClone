@@ -28,5 +28,7 @@
     <string name="label_first_name">First Name</string>
     <string name="label_last_name">Last Name</string>
     <string name="label_home_title">Create your account</string>
+    <string name="label_login_title">To get started, first enter your phone, email, or @username</string>
+    <string name="label_phone_email_username">Phone, email, or @username</string>
 
 </resources>
