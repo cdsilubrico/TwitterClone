@@ -29,16 +29,8 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_light"
         android:hint="@string/label_email"
-        android:textColorHint="@color/dark_"
-        android:paddingBottom="12dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
-
-
+        style="@style/edit_text_default"
         app:layout_constraintEnd_toStartOf="@+id/margin_end_vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/margin_start_vertical_guideline"
         app:layout_constraintTop_toTopOf="@+id/thirty_five_horizontal_guideline" />
@@ -46,14 +38,8 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_light"
+        style="@style/edit_text_default"
         android:hint="@string/label_password"
-        android:paddingBottom="12dp"
-        android:textColorHint="@color/dark_"
-        android:textSize="15sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/margin_start_vertical_guideline"
@@ -61,29 +47,16 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_last_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_light"
+        style="@style/edit_text_default"
         android:hint="@string/label_last_name"
-        android:textColorHint="@color/dark_"
-        android:paddingBottom="12dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/margin_end_vertical_guideline"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/margin_start_vertical_guideline"
         app:layout_constraintTop_toTopOf="@+id/forty_nine_horizontal_guideline" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_first_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_light"
         android:hint="@string/label_first_name"
-        android:textColorHint="@color/dark_"
-        android:paddingBottom="12dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
+        style="@style/edit_text_default"
         app:layout_constraintEnd_toStartOf="@+id/margin_end_vertical_guideline"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/margin_start_vertical_guideline"
