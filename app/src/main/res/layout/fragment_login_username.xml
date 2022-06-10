@@ -14,7 +14,8 @@
         app:layout_constraintBottom_toTopOf="@id/ten_percent_horizontal_guideline"
         app:layout_constraintEnd_toStartOf="@id/fifty_five_vertical_guideline"
         app:layout_constraintStart_toEndOf="@id/forty_five_percent_vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@id/five_percent_horizontal_guideline" />
+        app:layout_constraintTop_toBottomOf="@id/five_percent_horizontal_guideline"
+        tools:ignore="ImageContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
@@ -67,7 +68,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.01" />
 
-    <!-- 10% Horizontal -->
+    <!-- 5% Horizontal -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ten_percent_horizontal_guideline"
         android:layout_width="wrap_content"
@@ -157,8 +158,9 @@
         android:fontFamily="@font/roboto_regular"
         android:text="@string/label_forgot_password"
         android:textAllCaps="false"
+        android:textColor="#757575"
         app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
         app:layout_constraintTop_toBottomOf="@id/margin_bottom_horizontal_guideline"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

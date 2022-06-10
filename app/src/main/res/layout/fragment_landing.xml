@@ -1,9 +1,164 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.twitterClone.ui.fragment.Landing">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login_w_google"
+        style="@style/btn_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/twitter"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/label_create_account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/margin_end_horizontal_guideline_guideline"
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/or"
+        android:layout_marginTop="1dp"
+        />
 
+    <View
+        android:id="@+id/divider_left"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/semi_dark"
+        app:layout_constraintEnd_toStartOf="@id/forty_five_percent_vertical_guideline"
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/btn_create_an_account" />
 
-</FrameLayout>
+    <View
+        android:id="@+id/divider_right"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/semi_dark"
+        app:layout_constraintEnd_toStartOf="@id/margin_end_horizontal_guideline_guideline"
+        app:layout_constraintStart_toEndOf="@id/fifty_five_vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/btn_create_an_account" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="or"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toStartOf="@id/divider_right"
+        app:layout_constraintStart_toEndOf="@id/divider_left"
+        app:layout_constraintTop_toBottomOf="@id/btn_create_an_account" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_create_an_account"
+        style="@style/btn_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/label_continue_w_google"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/fifty_five_horizontal_guideline"
+        app:layout_constraintEnd_toStartOf="@id/margin_end_horizontal_guideline_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/label_landing_title"
+        android:textColor="@color/black"
+        android:textSize="37sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/margin_end_horizontal_guideline_guideline"
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/twenty_five_percent_horizontal_guideline" />
+
+    <!-- 70% Horizontal-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifty_five_horizontal_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".70" />
+
+    <!-- Margin Start -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margin_start_vertical_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".09" />
+
+    <!-- Margin Bottom -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margin_end_horizontal_guideline_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".91" />
+
+    <!-- 25% Horizontal-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/twenty_five_percent_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <!-- 1% Horizontal-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/five_percent_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <!-- 5% Horizontal -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ten_percent_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- 50% Vertical-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- 45% Vertical-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/forty_five_percent_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <!-- 55% Vertical-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifty_five_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/twitter_logo_vector_png_clipart_1"
+        app:layout_constraintBottom_toTopOf="@id/ten_percent_horizontal_guideline"
+        app:layout_constraintEnd_toStartOf="@id/fifty_five_vertical_guideline"
+        app:layout_constraintStart_toEndOf="@id/forty_five_percent_vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/five_percent_horizontal_guideline"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
