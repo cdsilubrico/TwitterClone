@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.example.twitterClone.ui.fragment.TwitterFeed"
+        android:name="com.example.twitterClone.ui.fragment.main.TwitterFeed"
         android:label="fragment_tweeter_feed"
         tools:layout="@layout/fragment_twitter_feed" />
     <fragment
         android:id="@+id/search"
-        android:name="com.example.twitterClone.ui.fragment.Search"
+        android:name="com.example.twitterClone.ui.fragment.main.Search"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/space"
-        android:name="com.example.twitterClone.ui.fragment.Space"
+        android:name="com.example.twitterClone.ui.fragment.main.Space"
         android:label="fragment_space"
         tools:layout="@layout/fragment_space" />
     <fragment
         android:id="@+id/notifications"
-        android:name="com.example.twitterClone.ui.fragment.Notification"
+        android:name="com.example.twitterClone.ui.fragment.main.Notification"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
     <fragment
         android:id="@+id/messages"
-        android:name="com.example.twitterClone.ui.fragment.Messages"
+        android:name="com.example.twitterClone.ui.fragment.main.Messages"
         android:label="fragment_messages"
         tools:layout="@layout/fragment_messages" />
 

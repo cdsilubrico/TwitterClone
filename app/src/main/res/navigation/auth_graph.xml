@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/auth_graph"
-    app:startDestination="@id/login">
+    app:startDestination="@id/sign_up">
 
     <fragment
         android:id="@+id/login"
-        android:name="com.example.twitterClone.ui.fragment.Login"
+        android:name="com.example.twitterClone.ui.fragment.auth.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_sign_up">
     </fragment>
 
     <fragment
-        android:id="@+id/signUp"
-        android:name="com.example.twitterClone.ui.fragment.SignUp"
+        android:id="@+id/sign_up"
+        android:name="com.example.twitterClone.ui.fragment.auth.SignUp"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_login_username" >
     </fragment>

@@ -18,6 +18,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
+        android:textColor="@color/black"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
@@ -27,14 +28,27 @@
         app:layout_constraintStart_toStartOf="@+id/margin_start_vertical_guideline"
         app:layout_constraintTop_toTopOf="@+id/margin_top_horizontal_guideline" />
 
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btn_login"-->
+<!--        style="@style/btn_default"-->
+<!--        android:text="@string/label_next"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/margin_bottom_horizontal_guideline"-->
+<!--        tools:ignore="TouchTargetSizeCheck" />-->
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_login"
+        style="@style/btn_default"
         android:layout_width="wrap_content"
-        android:text="@string/label_login"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/margin_bottom_horizontal_guideline"
         app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"
-        style="@style/btn_default"
+        android:text="@string/label_next"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/dark_"
+        android:textColor="@color/semi_dark"
         />
+
 
     <!-- 35% Horizontal-->
     <androidx.constraintlayout.widget.Guideline
@@ -48,9 +62,10 @@
         android:id="@+id/et_phone_email_username"
         style="@style/edit_text_default"
         android:hint="@string/label_phone_email_username"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@id/thirty_five_horizontal_guideline"
         app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"
-        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"/>
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline" />
 
     <!-- 5% Horizontal-->
     <androidx.constraintlayout.widget.Guideline
@@ -99,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.03" />
 
     <!--Margin End-->
     <androidx.constraintlayout.widget.Guideline
@@ -107,7 +122,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.97" />
 
     <!--Margin Top-->
     <androidx.constraintlayout.widget.Guideline
@@ -123,6 +138,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eight_four_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/semi_light"
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"
+        app:layout_constraintTop_toTopOf="@id/eight_four_horizontal_guideline"
+        android:orientation="horizontal"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/btn_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/margin_bottom_horizontal_guideline"
+        android:text="@string/label_forgot_password"
+        android:textAllCaps="false"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
