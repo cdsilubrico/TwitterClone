@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="twitter">#1DA1F2</color>
     <color name="dark_">#555c66</color>
+    <color name="semi_dark">#918f8e</color>
+    <color name="semi_light">#edeef0</color>
 </resources>
