@@ -1,4 +1,4 @@
-package com.example.twitterClone.ui.fragment
+package com.example.twitterClone.ui.fragment.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

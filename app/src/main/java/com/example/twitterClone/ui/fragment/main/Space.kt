@@ -1,4 +1,4 @@
-package com.example.twitterClone.ui.fragment
+package com.example.twitterClone.ui.fragment.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.twitterclone.R
 
-class Messages : Fragment() {
+class Space : Fragment() {
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +21,7 @@ class Messages : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_messages, container, false)
+        return inflater.inflate(R.layout.fragment_space, container, false)
     }
+
 }
