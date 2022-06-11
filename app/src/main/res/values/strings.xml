@@ -32,5 +32,8 @@
     <string name="label_login_title">To get started, first enter your phone, email, or @username</string>
     <string name="label_phone_email_username">Phone, email, or @username</string>
     <string name="label_forgot_password">Forgot password?</string>
+    <string name="label_landing_title">See what\'s happening in the world right now.</string>
+    <string name="label_create_account">Create account</string>
+    <string name="label_continue_w_google">Continue with Google</string>
 
 </resources>
