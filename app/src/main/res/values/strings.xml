@@ -35,5 +35,8 @@
     <string name="label_landing_title">See what\'s happening in the world right now.</string>
     <string name="label_create_account">Create account</string>
     <string name="label_continue_w_google">Continue with Google</string>
+    <string name="label_terms_privacy_policy_cookie">By signing up, you agree to our Terms, Privacy Policy, and Cookie Use.</string>
+    <string name="label_have_an_account_already">Have an account already? Log in</string>
+    <string name="label_or">or</string>
 
 </resources>
