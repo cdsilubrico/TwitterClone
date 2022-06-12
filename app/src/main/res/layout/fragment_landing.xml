@@ -5,8 +5,31 @@
     android:layout_height="match_parent"
     tools:context="com.example.twitterClone.ui.fragment.Landing">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/have_an_account_already"
+        android:text="@string/label_have_an_account_already"
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/margin_end_horizontal_guideline_guideline"
+        app:layout_constraintBottom_toTopOf="@id/margin_bottom_horizontal_guideline"
+        android:fontFamily="@font/roboto_light"
+        android:textStyle="bold"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/terms_privacy_cookie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/margin_end_horizontal_guideline_guideline"
+        android:text="@string/label_terms_privacy_policy_cookie"
+        app:layout_constraintTop_toBottomOf="@id/btn_create_account"
+        app:layout_constraintBottom_toTopOf="@id/have_an_account_already"
+        />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login_w_google"
+        android:id="@+id/btn_create_account"
         style="@style/btn_default"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -19,7 +42,7 @@
         app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
         app:layout_constraintTop_toBottomOf="@id/or"
         android:layout_marginTop="1dp"
-        android:textSize="16dp"
+        android:textSize="16sp"
         />
 
     <View
@@ -30,7 +53,7 @@
         android:background="@color/semi_dark"
         app:layout_constraintEnd_toStartOf="@id/forty_five_percent_vertical_guideline"
         app:layout_constraintStart_toEndOf="@id/margin_start_vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@id/btn_create_an_account" />
+        app:layout_constraintTop_toBottomOf="@id/btn_continue_w_google" />
 
     <View
         android:id="@+id/divider_right"
@@ -40,22 +63,22 @@
         android:background="@color/semi_dark"
         app:layout_constraintEnd_toStartOf="@id/margin_end_horizontal_guideline_guideline"
         app:layout_constraintStart_toEndOf="@id/fifty_five_vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@id/btn_create_an_account" />
+        app:layout_constraintTop_toBottomOf="@id/btn_continue_w_google" />
 
     <TextView
         android:id="@+id/or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
-        android:text="or"
+        android:text="@string/label_or"
         android:layout_marginTop="1dp"
         app:layout_constraintEnd_toStartOf="@id/divider_right"
         app:layout_constraintStart_toEndOf="@id/divider_left"
-        app:layout_constraintTop_toBottomOf="@id/btn_create_an_account" />
+        app:layout_constraintTop_toBottomOf="@id/btn_continue_w_google" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:textSize="16sp"
-        android:id="@+id/btn_create_an_account"
+        android:id="@+id/btn_continue_w_google"
         style="@style/btn_default"
         android:layout_width="0dp"
         android:gravity="center"
@@ -151,6 +174,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.54" />
+
+    <!-- Margin Bottom-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margin_bottom_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="0dp"
