@@ -3,20 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/auth_graph"
-    app:startDestination="@id/sign_up">
+    app:startDestination="@id/landing">
 
     <fragment
-        android:id="@+id/login"
+        android:id="@+id/signup"
         android:name="com.example.twitterClone.ui.fragment.auth.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_sign_up">
     </fragment>
 
     <fragment
-        android:id="@+id/sign_up"
+        android:id="@+id/login"
         android:name="com.example.twitterClone.ui.fragment.auth.SignUp"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_login_username" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/landing"
+        android:name="com.example.twitterClone.ui.fragment.Landing"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landing_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_landing_to_signup"
+            app:destination="@id/signup" />
     </fragment>
 
 </navigation>
