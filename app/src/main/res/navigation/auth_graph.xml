@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signup"
-        android:name="com.example.twitterClone.ui.fragment.auth.Login"
+        android:name="com.example.twitterClone.ui.fragment.auth.LoginUsername"
         android:label="fragment_login"
         tools:layout="@layout/fragment_sign_up">
     </fragment>
@@ -17,6 +17,9 @@
         android:name="com.example.twitterClone.ui.fragment.auth.SignUp"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_login_username" >
+        <action
+            android:id="@+id/action_login_to_loginPassword"
+            app:destination="@id/loginPassword" />
     </fragment>
 
     <fragment
@@ -31,5 +34,10 @@
             android:id="@+id/action_landing_to_signup"
             app:destination="@id/signup" />
     </fragment>
+    <fragment
+        android:id="@+id/loginPassword"
+        android:name="com.example.twitterClone.ui.fragment.auth.LoginPassword"
+        android:label="fragment_login_password"
+        tools:layout="@layout/fragment_login_password" />
 
 </navigation>
