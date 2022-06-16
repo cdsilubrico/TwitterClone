@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.twitterclone.R
 
-class Login : Fragment() {
+class LoginUsername : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
