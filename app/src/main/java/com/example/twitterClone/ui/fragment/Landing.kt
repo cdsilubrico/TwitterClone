@@ -3,23 +3,22 @@ package com.example.twitterClone.ui.fragment
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
-import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.ui.graphics.Color
-import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
-import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.twitterclone.R
 import com.example.twitterclone.databinding.FragmentLandingBinding
 
-class Landing : Fragment() {
+class Landing : Fragment(R.layout.fragment_landing) {
 
     private lateinit var landingBinding: FragmentLandingBinding
+    private lateinit var tvText:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,13 +31,11 @@ class Landing : Fragment() {
         // Inflate the layout for this fragment
         landingBinding = FragmentLandingBinding.inflate(inflater, container, false)
 
-
         return landingBinding.root
     }
 
     private fun changeLoginSubStringColor() {
-        val tvText = resources.getString(R.string.label_have_an_account_already)
-        val spannableString = SpannableString(tvText)
+        val spannableString = SpannableString(this.tvText)
         val id = resources.getString(R.color.twitter)
         spannableString.setSpan(
             ForegroundColorSpan(id.toColorInt()),
@@ -79,9 +76,33 @@ class Landing : Fragment() {
         changePrivacyTermsSubStringColor()
     }
 
+    private fun setClickableSubStringLogin() {
+        val spannableString = SpannableString(this.tvText)
+        val clickableSpan = object : ClickableSpan(){
+            override fun onClick(widget: View) {
+                onLoginClick()
+            }
+        }
+        spannableString.setSpan(clickableSpan,25,31,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        landingBinding.haveAnAccountAlready.movementMethod = LinkMovementMethod.getInstance()
+        landingBinding.haveAnAccountAlready.text = spannableString
+    }
+
+    private fun onLoginClick()
+    {
+        val action = LandingDirections.actionLandingToLogin()
+        findNavController().navigate(action)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initializeString()
         setSubStringColor()
+        setClickableSubStringLogin()
+    }
+
+    private fun initializeString() {
+        this.tvText = resources.getString(R.string.label_have_an_account_already)
     }
 
 
