@@ -10,16 +10,22 @@
         android:name="com.example.twitterClone.ui.fragment.auth.LoginUsername"
         android:label="fragment_login"
         tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signup_to_login"
+            app:destination="@id/login_username" />
     </fragment>
 
     <fragment
-        android:id="@+id/login"
+        android:id="@+id/login_username"
         android:name="com.example.twitterClone.ui.fragment.auth.SignUp"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_login_username" >
         <action
             android:id="@+id/action_login_to_loginPassword"
-            app:destination="@id/loginPassword" />
+            app:destination="@id/login_password" />
+        <argument
+            android:name="username"
+            app:argType="string" />
     </fragment>
 
     <fragment
@@ -29,15 +35,26 @@
         tools:layout="@layout/fragment_landing" >
         <action
             android:id="@+id/action_landing_to_login"
-            app:destination="@id/login" />
+            app:destination="@id/login_username"
+            app:enterAnim="@anim/slide_right" />
         <action
             android:id="@+id/action_landing_to_signup"
             app:destination="@id/signup" />
     </fragment>
     <fragment
-        android:id="@+id/loginPassword"
+        android:id="@+id/login_password"
         android:name="com.example.twitterClone.ui.fragment.auth.LoginPassword"
         android:label="fragment_login_password"
-        tools:layout="@layout/fragment_login_password" />
+        tools:layout="@layout/fragment_login_password" >
+        <action
+            android:id="@+id/action_login_password_to_main_activity"
+            app:destination="@id/main_activity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/main_activity"
+        android:name="com.example.twitterClone.ui.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 
 </navigation>
