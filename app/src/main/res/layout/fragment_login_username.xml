@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="@+id/margin_top_horizontal_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_next"
         style="@style/btn_default"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
