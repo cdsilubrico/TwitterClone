@@ -5,22 +5,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.twitterclone.R
+import com.example.twitterclone.databinding.FragmentLoginPasswordBinding
 
 class LoginPassword : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var loginPasswordBinding: FragmentLoginPasswordBinding
+    private lateinit var usernameKey:String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login_password, container, false)
+    ): View {
+        loginPasswordBinding = FragmentLoginPasswordBinding.inflate(layoutInflater,container,false)
+
+        return loginPasswordBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initialize()
+        getArgumentsData()
+    }
+
+    private fun getArgumentsData(){
+        val bundle = arguments
+        loginPasswordBinding.etPhoneEmailUsername.setText(bundle?.get(this.usernameKey).toString())
+    }
+
+    private fun initialize() {
+        this.usernameKey = "username"
     }
 }
