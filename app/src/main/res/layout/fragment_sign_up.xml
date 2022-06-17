@@ -63,7 +63,7 @@
         app:layout_constraintTop_toTopOf="@+id/forty_two_horizontal_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_next"
         android:gravity="end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
