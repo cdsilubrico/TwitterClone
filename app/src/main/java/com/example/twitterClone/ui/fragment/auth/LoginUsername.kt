@@ -28,15 +28,14 @@ class LoginUsername : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        loginUsernameBinding = FragmentLoginUsernameBinding.inflate(layoutInflater,container,false)
+        loginUsernameBinding =
+            FragmentLoginUsernameBinding.inflate(layoutInflater, container, false)
 
         return loginUsernameBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        setDefaults()
-//        initializeString()
         onNextClick()
         validateInput()
     }
@@ -46,12 +45,12 @@ class LoginUsername : Fragment() {
     }
 
     private fun onNextClick() {
-        loginUsernameBinding.btnNext.setOnClickListener{
+        loginUsernameBinding.btnNext.setOnClickListener {
             navigatePasswordScreen()
         }
     }
 
-    private fun navigatePasswordScreen(){
+    private fun navigatePasswordScreen() {
         val action = LoginUsernameDirections.actionLoginToLoginPassword(getUsername())
         findNavController().navigate(action)
     }
@@ -60,22 +59,25 @@ class LoginUsername : Fragment() {
         return loginUsernameBinding.etPhoneEmailUsername.text.toString()
     }
 
-    private fun validateInput()
-    {
-        loginUsernameBinding.etPhoneEmailUsername.addTextChangedListener{
-            if(loginUsernameBinding.etPhoneEmailUsername.text.isNullOrEmpty())
-            {
-                loginUsernameBinding.btnNext.isEnabled = false
-                //loginUsernameBinding.btnNext.background.setTint(R.color.white)
-
-            }else{
-                loginUsernameBinding.btnNext.isEnabled = true
-                loginUsernameBinding.btnNext.setTextColor(R.color.black)
-                //loginUsernameBinding.btnNext.background.setTint(R.color.dark_)
+    private fun validateInput() {
+        loginUsernameBinding.etPhoneEmailUsername.addTextChangedListener {
+            if (loginUsernameBinding.etPhoneEmailUsername.text.isNullOrEmpty()) {
+                btnDisabled()
+            } else {
+                btnEnabled()
             }
         }
-
     }
 
+    private fun btnDisabled() {
+        loginUsernameBinding.btnNext.isEnabled = false
+        loginUsernameBinding.btnNext.alpha = .5F
+    }
+
+    private fun btnEnabled() {
+        loginUsernameBinding.btnNext.isEnabled = true
+        loginUsernameBinding.btnNext.alpha = 1F
+        loginUsernameBinding.btnNext.setHintTextColor(R.color.semi_dark)
+    }
 
 }

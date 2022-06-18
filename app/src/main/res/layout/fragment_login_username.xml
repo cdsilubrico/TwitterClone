@@ -31,12 +31,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_next"
-        style="@style/btn_default"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/dark_"
         android:enabled="false"
+        style="@style/btn_default"
+        android:backgroundTint="@color/dark_"
         android:text="@string/label_next"
+        android:alpha=".5"
         android:textAllCaps="false"
         android:textColor="@color/semi_dark"
         app:layout_constraintEnd_toStartOf="@id/margin_end_vertical_guideline"
