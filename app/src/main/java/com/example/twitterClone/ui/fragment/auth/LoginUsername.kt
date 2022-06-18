@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import androidx.compose.ui.graphics.Color
+import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
+import com.example.twitterclone.R
 import com.example.twitterclone.databinding.FragmentLoginUsernameBinding
 
 class LoginUsername : Fragment() {
@@ -14,7 +18,6 @@ class LoginUsername : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initializeString()
     }
 
     private fun initializeString() {
@@ -32,8 +35,14 @@ class LoginUsername : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initializeString()
+//        setDefaults()
+//        initializeString()
         onNextClick()
+        validateInput()
+    }
+
+    private fun setDefaults() {
+        loginUsernameBinding.btnNext.isClickable = false
     }
 
     private fun onNextClick() {
@@ -45,11 +54,27 @@ class LoginUsername : Fragment() {
     private fun navigatePasswordScreen(){
         val action = LoginUsernameDirections.actionLoginToLoginPassword(getUsername())
         findNavController().navigate(action)
-
     }
 
     private fun getUsername(): String {
         return loginUsernameBinding.etPhoneEmailUsername.text.toString()
+    }
+
+    private fun validateInput()
+    {
+        loginUsernameBinding.etPhoneEmailUsername.addTextChangedListener{
+            if(loginUsernameBinding.etPhoneEmailUsername.text.isNullOrEmpty())
+            {
+                loginUsernameBinding.btnNext.isEnabled = false
+                //loginUsernameBinding.btnNext.background.setTint(R.color.white)
+
+            }else{
+                loginUsernameBinding.btnNext.isEnabled = true
+                loginUsernameBinding.btnNext.setTextColor(R.color.black)
+                //loginUsernameBinding.btnNext.background.setTint(R.color.dark_)
+            }
+        }
+
     }
 
 
