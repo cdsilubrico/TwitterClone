@@ -7,12 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.twitterclone.R
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ForgotPasswordVerifyPersonalInformation.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ForgotPasswordVerifyPersonalInformation : Fragment() {
+class FPFindTwitterAccount : Fragment() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,10 +19,7 @@ class ForgotPasswordVerifyPersonalInformation : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(
-            R.layout.fragment_forgot_password_verify_personal_information,
-            container,
-            false
-        )
+        return inflater.inflate(R.layout.fragment_forgot_password, container, false)
     }
+
 }
